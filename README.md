@@ -1,10 +1,26 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Berikut merupakan panduan untuk instalasi dan penggunaan website
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Yang harus dipersiapkan
 
-Test
+- Memiliki CLI/Command Line Interface berupa Command Prompt (CMD) atau Power Shell atau aplikasi text editor seperti Visual Studio Code.
+- Memiliki MySQL.
+- Memiliki Web Server (misal Laragon atau XAMPP) dengan PHP minimal versi 7.3.
+- Composer telah ter-install, cek versi dengan perintah composer -V melalui terminal.
+- Dapat menggunakan perintah php -v dengan terminal (menampilkan versi php).
+- Memiliki koneksi internet (untuk proses instalasi)
+
+## Langkah pengerjaan
+
+- Download Source Code dari repo Github https://github.com/MeleniaWinda/Choicefashion dalam bentuk Zip.
+- Extract file zip (source code) ke dalam direktori root pada Web Server (XAMPP htdocs/nama_projek, Laragon www/nama_projek).
+- Jalankan perintan composer install pada CMD,
+- Membuat database kosong pada MySQL,
+- Duplikat file .env.example, lalu rename menjadi .env.
+- Setting koneksi database di file .env.
+- Kembali ke CMD, php artisan key:generate.
+- Jalankan perintah php artisan migrate:fresh --seed. Jika di cek di MySQL, seharusnya tabel sudah muncul.
+- Jalankan perintah php artisan serve pada terminal.
+- Buka aplikasi melalui browser (127.0.0.1:8000)
+- Klik menu Sign In
+- Login menggunakan username admin@app.com dan password 1234.
+- Aplikasi siap digunakan.
